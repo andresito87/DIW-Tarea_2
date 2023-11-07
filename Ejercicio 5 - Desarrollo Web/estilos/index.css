@@ -1,0 +1,519 @@
+/*Importar fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@300&display=swap');
+
+:root {
+    /*Colores*/
+    /*color con opacidad*/
+    --color-primario: rgba(75, 88, 66, 0.8);
+    --color-secundario: rgba(143, 179, 57, 1);
+    --color-terciario: rgba(183, 206, 99, 1);
+    --color-cuaternario: rgba(199, 213, 159, 1);
+    --color-quintenario: rgba(218, 221, 216, 1);
+
+    /*Fuentes*/
+    /*Open Sans 600*/
+    font-family: "Open Sans", sans-serif;
+    /*Roboto Light 300*/
+    font-family: "Roboto", sans-serif;
+
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-quintenario);
+}
+
+/*Header*/
+header {
+    height: 200px;
+    background-color: var(--color-primario);
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nombre-empresa {
+    max-width: 20%;
+    width: 200px;
+    color: var(--color-secundario);
+    font-size: 1.2em;
+    font-family: "Open Sans", sans-serif;
+}
+
+header .submenu-header {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4.5em;
+}
+
+header .logo-empresa img {
+    width: 60%;
+}
+
+header .submenu-header p {
+    color: var(--color-cuaternario);
+    font-size: 1.2em;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin: 0.5em;
+}
+
+header .imagen-producto {
+    display: inline;
+}
+
+header .imagen-producto img {
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+header .botones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+header .botones button {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--color-terciario);
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.2em;
+    margin: 0.25em;
+    width: 100px;
+    transition: all 0.3s ease;
+}
+
+header .botones button:hover {
+    background-color: var(--color-secundario);
+}
+
+/*Navegacion*/
+nav {
+    font-family: "Open Sans", sans-serif;
+    height: 100px;
+    background-color: var(--color-secundario);
+    list-style: none;
+    padding: 1em;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0.5em;
+}
+
+nav ul li a {
+    color: var(--color-primario);
+    font-size: 1.2em;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*no se pide pero me parecio util para facilitar la navegacion*/
+nav ul li a:hover {
+    color: var(--color-quintenario);
+}
+
+
+/*Main*/
+main {
+    padding: 1em;
+}
+
+main .tarjetas-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "zona1 zona2"
+        "zona1 zona3"
+        "zona4 zona5"
+}
+
+main .tarjetas-productos .producto1 {
+    grid-area: zona1;
+}
+
+main .tarjetas-productos .producto2 {
+    grid-area: zona2;
+}
+
+main .tarjetas-productos .producto3 {
+    grid-area: zona3;
+}
+
+main .tarjetas-productos .producto4 {
+    grid-area: zona4;
+}
+
+main .tarjetas-productos .producto5 {
+    grid-area: zona5;
+}
+
+main .tarjetas-productos div {
+    background-color: var(--color-secundario);
+    border-radius: 0.5em;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2em;
+    color: var(--color-primario);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+main .tarjetas-productos div img {
+    width: 90%;
+}
+
+main .tarjetas-productos img {
+    border-radius: 50%;
+    width: 50%;
+    height: 70%;
+}
+
+main .tarjetas-productos .producto1 img {
+    width: 90%;
+    height: 50%;
+}
+
+main .tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+main .tabla-productos caption {
+    font-size: 2em;
+    font-family: "Open Sans", sans-serif;
+    color: var(--color-primario);
+    padding: 0.5em;
+}
+
+main .tabla-productos th {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 0.5em;
+    border: 1px solid black;
+}
+
+main .tabla-productos td {
+    padding: 0.5em;
+    border: 1px solid black;
+}
+
+main .tabla-productos tr:nth-child(even) {
+    background-color: var(--color-terciario);
+}
+
+main .producto-destacado {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .producto-destacado img {
+    width: 80%;
+    border-radius: 0.5em;
+}
+
+main .producto-destacado p {
+    width: 95%;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+main .comentarios-clientes div {
+    width: 20%;
+    margin: 1em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .comentarios-clientes img {
+    width: 100px;
+    height: 100px;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+main .comentarios-clientes {
+    display: flex;
+    flex-direction: row;
+    align-items: first baseline;
+    justify-content: center;
+    margin: 2em;
+}
+
+main .comentarios-clientes h2 {
+    color: var(--color-primario);
+    font-family: "Open Sans", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    justify-self: center;
+}
+
+main .comentarios-clientes h3 {
+    color: var(--color-secundario);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    justify-self: center;
+}
+
+main .comentarios-clientes p {
+    color: var(--color-primario);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+main .comentarios-clientes img {
+    width: 100px;
+    border: 3px solid var(--color-secundario);
+}
+
+main .tarjeta-cliente p:last-child {
+    opacity: 0;
+}
+
+main .comentarios-clientes div:hover img:nth-child(5) {
+    border: 3px solid var(--color-secundario);
+    filter: grayscale(100%);
+}
+
+main .comentarios-clientes div:hover p {
+    opacity: 1;
+}
+
+main .zona-contenidos-2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+main .zona-contenidos-2 p {
+    font-size: 1.2em;
+    font-family: "Open Sans", sans-serif;
+    color: var(--color-primario);
+    padding: 0.5em;
+}
+
+main .zona-contenidos-2 .noticia {
+    column-count: 2;
+    column-gap: 20px;
+    column-fill: balance;
+    column-rule: 2px solid var(--color-primario);
+    background-color: #fff;
+    box-shadow: 0 0 10px var(--color-primario);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.zona-contenidos-2 .noticia p::first-letter {
+    text-transform: capitalize;
+    font-size: 2em;
+}
+
+main .zona-contenidos-2 .imagenes-noticia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+main .imagenes-noticia img {
+    width: 30%;
+    border-radius: 0.5em;
+    border: 3px solid var(--color-secundario);
+    align-self: center;
+}
+
+/*Footer*/
+footer {
+    background-color: var(--color-primario);
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .cookies form {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*TODO:modificar si es usando checked*/
+footer .cookies form label:hover {
+    outline: 2px solid var(--color-secundario);
+}
+
+footer .opciones-footer {
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .opciones-footer ul {
+    list-style: square;
+    font-size: 1.5em;
+}
+
+footer .opciones-footer ul li:hover {
+    cursor: pointer;
+    list-style-image: linear-gradient(to right, var(--color-secundario), var(--color-terciario));
+}
+
+footer .iconos-RRSS {
+    color: var(--color-quintenario);
+    text-decoration: none;
+    padding: 0.5em;
+    margin: 1em;
+    border-radius: 0.25em;
+}
+
+footer .iconos-RRSS img {
+    width: 50px;
+    border-radius: 1em;
+    border: 3px solid var(--color-quintenario);
+}
+
+footer .iconos-RRSS img:hover {
+    border: 3px solid var(--color-secundario);
+    filter: invert(100%);
+}
+
+/*Responsive*/
+/*Media Queries*/
+@media (max-width: 620px) {
+
+    header .nombre-empresa {
+        font-size: 0.8em;
+        margin: 0.5em;
+    }
+
+    header .imagen-producto {
+        display: none;
+    }
+
+    header .botones {
+        display: flex;
+        flex-direction: row;
+        margin-left: 30px;
+    }
+
+    nav {
+        margin: 0;
+        padding: 0;
+        padding-top: 1em;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        font-size: 0.8em;
+    }
+
+    main .tarjetas-productos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .tarjetas-productos div:nth-child(n+4) {
+        display: none;
+    }
+
+    main .tabla-productos {
+        display: none;
+    }
+
+    main .comentarios-clientes {
+        display: none;
+    }
+
+    main .zona-contenidos-2 {
+        font-size: 0.8em;
+    }
+
+    main .zona-contenidos-2 h3 {
+        text-transform: lowercase;
+    }
+
+    /*TODO: todas las letras a minusculas*/
+    main .zona-contenidos-2 .noticia {
+        column-count: 1;
+        font-size: 1em;
+    }
+
+    .zona-contenidos-2 .noticia p::first-letter {
+        font-size: 1em;
+    }
+
+    main .zona-contenidos-2 .imagenes-noticia img:first-child {
+        display: none;
+    }
+
+    main .zona-contenidos-2 .imagenes-noticia img {
+        width: 90%;
+    }
+
+    footer .cookies,
+    footer .iconos-RRSS {
+        display: none;
+    }
+
+    footer .opciones-footer ul {
+        font-size: 1.5em;
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .opciones-footer ul li {
+        width: 100%;
+        list-style: none;
+        margin: 1em;
+        text-align: center;
+    }
+
+    footer .opciones-footer ul a {
+        text-decoration: none;
+        color: var(--color-quintenario);
+    }
+
+    footer .opciones-footer ul a:hover {
+        text-decoration: underline;
+    }
+}

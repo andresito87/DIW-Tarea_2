@@ -1,0 +1,182 @@
+/*Ejercicio 3: Maquetación con Grid*/
+/*Importar fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@300&display=swap');
+
+:root {
+    /*Colores*/
+    /*color con opacidad*/
+    --color-primario: rgba(75, 88, 66, 0.6);
+    --color-secundario: rgba(143, 179, 57, 1);
+    --color-terciario: rgba(183, 206, 99, 1);
+    --color-cuaternario: rgba(199, 213, 159, 1);
+    --color-quintenario: rgba(218, 221, 216, 1);
+
+    /*Fuentes*/
+    /*Roboto Light 300*/
+    font-family: "Roboto", sans-serif;
+    /*Open Sans 600*/
+    font-family: "Open Sans", sans-serif;
+}
+
+/*Reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+}
+
+.contenedor-grid {
+    height: 100%;
+    display: grid;
+    grid-template:
+        "header" 150px
+        "navbar" 50px
+        "main" auto
+        "footer" 100px;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "main"
+        "footer";
+}
+
+.header {
+    background-color: var(--color-primario);
+    font-family: "Open Sans", sans-serif;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.nombreEmpresa {
+    font-size: 2rem;
+    letter-spacing: 30px;
+    padding: 40px 0px;
+    text-shadow:
+        2px 2px var(--color-quintenario),
+        4px 4px var(--color-secundario);
+}
+
+.navbar {
+    background-color: var(--color-secundario);
+    font-family: "Open Sans", sans-serif;
+    grid-area: navbar;
+}
+
+.navbar ul {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+.navbar ul li {
+    text-align: center;
+    padding: 10px;
+    justify-self: center;
+    align-self: center;
+}
+
+.main {
+    background-color: var(--color-quintenario);
+    grid-area: main;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 10px;
+}
+
+.main h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.main p {
+    text-align: center;
+    padding: 40px;
+}
+
+.footer {
+    background-color: var(--color-primario);
+    font-family: "Open Sans", sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-area: footer;
+}
+
+.footer div {
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    padding: 10px;
+}
+
+/*Ejercicio 4: Footer con Flex*/
+
+@font-face {
+    font-family: "Agbalumo";
+    src: url("C:\Users\andres\AppData\Local\Microsoft\Windows\Fonts");
+}
+
+.footerFlex {
+    background-color: var(--color-primario);
+    padding: 10px;
+}
+
+.footerFlex h2 {
+    font-family: "Agbalumo", sans-serif, serif;
+    text-align: center;
+}
+
+.footerFlex footer {
+    font-family: "Agbalumo", sans-serif, serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.nombre,
+.apellidos,
+.localidadProvincia {
+    width: 33%;
+    border: 3px solid var(--color-primario);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    align-self: center;
+    background-color: var(--color-primario);
+}
+
+.nombre {
+    font-size: 1.5em;
+    text-align: right;
+    align-self: center;
+    color: var(--color-terciario);
+}
+
+.apellidos {
+    font-size: 1em;
+    text-align: left;
+    /*sombra de la caja de derecha a izquierda*/
+    box-shadow: -10px 0 5px 2px var(--color-quintenario);
+}
+
+.localidadProvincia {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.localidadProvincia span {
+    padding-left: 30px;
+    color: var(--color-cuaternario);
+}
