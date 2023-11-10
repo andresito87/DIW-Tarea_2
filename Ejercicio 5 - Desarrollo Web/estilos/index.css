@@ -16,9 +16,11 @@
     /*Roboto Light 300*/
     font-family: "Roboto", sans-serif;
 
+    /*Tamaños de las cajas incluyendo el padding y el border*/
     box-sizing: border-box;
 }
 
+/*Estilos generales*/
 body {
     margin: 0;
     padding: 0;
@@ -357,7 +359,7 @@ main .zona-contenidos-2 .noticia {
     padding: 20px;
 }
 
-.zona-contenidos-2 .noticia p::first-letter {
+main .zona-contenidos-2 .noticia p::first-letter {
     text-transform: capitalize;
     font-size: 2em;
 }
@@ -442,6 +444,7 @@ footer .iconos-RRSS img:hover {
 /*Media Queries*/
 @media (max-width: 620px) {
 
+    /*Header*/
     header .nombre-empresa {
         font-size: 0.8em;
         margin: 0.5em;
@@ -457,6 +460,7 @@ footer .iconos-RRSS img:hover {
         margin-left: 30px;
     }
 
+    /*Navegacion*/
     nav {
         margin: 0;
         padding: 0;
@@ -469,6 +473,7 @@ footer .iconos-RRSS img:hover {
         font-size: 0.8em;
     }
 
+    /*Main*/
     main .tarjetas-productos {
         display: flex;
         flex-direction: column;
@@ -500,7 +505,7 @@ footer .iconos-RRSS img:hover {
         font-size: 1em;
     }
 
-    .zona-contenidos-2 .noticia p::first-letter {
+    main .zona-contenidos-2 .noticia p::first-letter {
         font-size: 1em;
         /*quitar capitalize*/
         text-transform: lowercase;
@@ -514,6 +519,7 @@ footer .iconos-RRSS img:hover {
         width: 90%;
     }
 
+    /*Footer*/
     footer .cookies,
     footer .iconos-RRSS {
         display: none;
