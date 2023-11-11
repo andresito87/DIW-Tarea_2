@@ -142,40 +142,31 @@ main .tarjetas-productos {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "zona1 zona2"
-        "zona1 zona3"
-        "zona4 zona5"
+        "zona3 zona4";
+
 }
 
 main .tarjetas-productos .producto1 {
     grid-area: zona1;
-    width: 85%;
-    height: 70%;
-    margin-top: 2em;
-    margin-left: 1em;
-
+    width: 60%;
     justify-self: center;
-    align-self: center;
-    vertical-align: middle;
+
 }
+
 
 main .tarjetas-productos .producto2 {
     grid-area: zona2;
-    width: 80%;
     justify-self: center;
 }
 
 main .tarjetas-productos .producto3 {
     grid-area: zona3;
-    width: 80%;
     justify-self: center;
 }
 
 main .tarjetas-productos .producto4 {
     grid-area: zona4;
-}
-
-main .tarjetas-productos .producto5 {
-    grid-area: zona5;
+    justify-self: center;
 }
 
 main .tarjetas-productos div {
@@ -293,7 +284,7 @@ main .comentarios-clientes {
     flex-direction: row;
     align-items: first baseline;
     justify-content: center;
-    margin: 2em;
+    margin: 1em;
 }
 
 main .comentarios-clientes h2 {
@@ -325,6 +316,7 @@ main .comentarios-clientes img {
 
 main .tarjeta-cliente p:last-child {
     opacity: 0;
+    margin-bottom: 0;
 }
 
 main .comentarios-clientes div:hover img:nth-child(5) {
@@ -480,8 +472,13 @@ footer .iconos-RRSS img:hover {
         align-items: center;
     }
 
+    /*Dejo de mostrar los productos a partir del 4*/
     main .tarjetas-productos div:nth-child(n+4) {
         display: none;
+    }
+
+    main .tarjetas-productos .producto1 {
+        width: 85%;
     }
 
     main .tabla-productos {
@@ -494,10 +491,6 @@ footer .iconos-RRSS img:hover {
 
     main .zona-contenidos-2 {
         font-size: 0.8em;
-    }
-
-    main .zona-contenidos-2 h3 {
-        text-transform: lowercase;
     }
 
     main .zona-contenidos-2 .noticia {
