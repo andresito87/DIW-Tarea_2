@@ -36,6 +36,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2em;
 }
 
 header .nombre-empresa {
@@ -111,6 +112,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
+    padding-left: 0;
 }
 
 nav ul li {
@@ -131,7 +133,6 @@ nav ul li a:hover {
     color: var(--color-quintenario);
 }
 
-
 /*Main*/
 main {
     padding: 1em;
@@ -143,7 +144,6 @@ main .tarjetas-productos {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "zona1 zona2"
         "zona3 zona4";
-
 }
 
 main .tarjetas-productos .producto1 {
@@ -152,7 +152,6 @@ main .tarjetas-productos .producto1 {
     justify-self: center;
 
 }
-
 
 main .tarjetas-productos .producto2 {
     grid-area: zona2;
@@ -195,11 +194,6 @@ main .tarjetas-productos img {
     border-radius: 50%;
     width: 50%;
     height: 70%;
-}
-
-main .tarjetas-productos .producto1 img {
-    width: 90%;
-    height: 50%;
 }
 
 main .tabla-productos {
@@ -478,7 +472,7 @@ footer .iconos-RRSS img:hover {
     }
 
     main .tarjetas-productos .producto1 {
-        width: 85%;
+        width: 80%;
     }
 
     main .tabla-productos {
